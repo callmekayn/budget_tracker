@@ -1,17 +1,40 @@
+from functions import show_budget,calculate_balance
+
 def main():
-    print("--- Büdcə İzləyicisi v1.0 ---")
 
-    try:
-        gelir = float(input("Aylıq gəlirinizi daxil edin: "))
-        xercli_ad = input("Xərcin adını yazın: ")
-        xercli_mebleg = float(input("Xərcin məbləğini yazın: "))
+    gelir = 1000
+    xercler = []
 
-        qaliq = gelir - xercli_mebleg
-        print(f"\nHesabat: {xercli_ad} üçün {xercli_mebleg} AZN xərcləndi.")
-        print(f"Qalan məbləğ: {qaliq} AZN")
+    print("--- Budget Tracker v1.0 ---")
+    while True:
+        print("\n=== Budget Planner ===")
+        print("1. Xerc daxil edin")
+        print("2. Xercleri göstərin")
+        print("3. Balansı yoxla")
+        print("4. Çıxış")
 
-    except ValueError:
-        print("Xahiş olunur yalnız rəqəm daxil edin!")
+        secim = input("\nSeciminizi edin 1-4 : ")
+
+        if secim == "1":
+            ad = input("Xercin adi : ")
+            try:
+                mebleg = float(input("Meblegi : "))
+                xercler.append({"ad":ad,"mebleg":mebleg})
+                print("Ugurla elave edildi!")
+            except ValueError:
+                print("Səhv: Zəhmət olmasa rəqəm daxil edin.")
+        elif secim == "2":
+            show_budget(xercler)
+        elif secim == "3":
+            balans,toplam = calculate_balance(gelir,xercler)
+            print(f"\nÜmumi Gəlir: {gelir} AZN")
+            print(f"Toplam Xərc: {toplam} AZN")
+            print(f"Cari Balans: {balans} AZN")
+        elif secim == "4":
+            print("Programdan cixilir sagolun!")
+            break
+        else:
+            print("Səhv seçim! Yenidən yoxlayın.")
 
 
 if __name__ == "__main__":
