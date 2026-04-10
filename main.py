@@ -1,5 +1,5 @@
 from functions import show_budget,calculate_balance
-
+#Developed by Kenan Abbaszade
 def main():
 
     gelir = 1000
