@@ -26,7 +26,7 @@ def main():
                 print("Səhv: Zəhmət olmasa rəqəm daxil edin.")
         elif secim == "2":
             try:
-                kommunal = input("Kommunal daxil edin: ")
+                kommunal = float(input("Kommunal daxil edin: "))
                 xercler.append({"kommunal":kommunal})
                 print("Ayliq Kommunal xərci uğurla daxil edildi!")
             except ValueError:
