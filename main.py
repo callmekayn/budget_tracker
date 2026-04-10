@@ -25,9 +25,10 @@ def main():
             except ValueError:
                 print("Səhv: Zəhmət olmasa rəqəm daxil edin.")
         elif secim == "2":
+            ad = input("Kommunal xercin adi : ")
             try:
-                kommunal = float(input("Kommunal daxil edin: "))
-                xercler.append({"kommunal":kommunal})
+                mebleg = float(input("Kommunal daxil edin: "))
+                xercler.append({"ad":ad,"mebleg":mebleg})
                 print("Ayliq Kommunal xərci uğurla daxil edildi!")
             except ValueError:
                 print("Error: Zəhmət olmasa düzgün daxil edildiyini yoxlayin")
