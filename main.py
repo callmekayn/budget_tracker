@@ -10,7 +10,7 @@ def main():
     xercler = []
     gelirler = []
 
-    print("--- Budget Tracker v1.0 ---")
+    print("--- Budget Tracker v1.1 ---")
     while True:
         print("\n=== Budget Planner ===")
         print("1. Xerc daxil edin")
