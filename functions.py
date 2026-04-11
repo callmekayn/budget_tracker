@@ -9,9 +9,10 @@ def show_budget(data):
         print("---------------------------")
 
 def calculate_balance(gelir,data):
-    toplam_xerc = sum(xerc["mebleg"]for xerc in data)
+    toplam_xerc = sum(xerc["mebleg"] for xerc in data)
     balans = gelir - toplam_xerc
     return balans, toplam_xerc
+
 def reset_budget(data):
     confirmation = input("Butun siyahını temizlemeyi tesdiqleyirsinizmi No/Yes : ")
     if confirmation == "Yes":

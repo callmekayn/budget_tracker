@@ -1,9 +1,9 @@
-from database import create_tables, add_expense
+
 from functions import show_budget,calculate_balance,reset_budget
 import datetime
 
 #Developed 8 April 10:30
-create_tables()
+
 #Developed by Kenan Abbaszade
 
 def main():
