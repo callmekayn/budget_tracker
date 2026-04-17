@@ -1,9 +1,9 @@
-
 from functions import show_budget,calculate_balance,reset_budget
 import datetime
-
-#Developed 8 April 10:30
-
+import sqlite3
+#Developed 8 April 10:3
+# 0
+#17.04.2026
 #Developed by Kenan Abbaszade
 
 def main():
@@ -20,8 +20,9 @@ def main():
         print("3. Kommunal Ödənişlər")
         print("4. Xercleri göstərin")
         print("5. Balansı yoxla")
-        print("6. Reset Budget")
-        print("7. Çıxış")
+        print("6. Tranzaksiya")
+        print("7. Reset Budget")
+        print("8. Çıxış")
 
         secim = input("\nSeciminizi edin 1-4 : ")
 
@@ -58,8 +59,10 @@ def main():
             print(f"Toplam Xərc: {toplam} AZN")
             print(f"Cari Balans: {balans} AZN")
         elif secim == "6":
-            reset_budget(xercler)
+            return ''
         elif secim == "7":
+            reset_budget(xercler)
+        elif secim == "8":
             print("Programdan cixilir sagolun!")
             break
         else:
